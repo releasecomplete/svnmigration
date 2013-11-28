@@ -10,12 +10,15 @@ public class AutoInc {
     int i = 1;
     System.out.println("i : " + i);
     System.out.println("++i : " + ++i); // Pre-increment
-    System.out.println("i++ : " + i++); // Post-increment
-    System.out.println("i : " + i);
-    System.out.println("--i : " + --i); // Pre-decrement
+    //System.out.println("i++ : " + i++); // Post-increment
+    //System.out.println("i : " + i);
+    //System.out.println("--i : " + --i); // Pre-decrement
     System.out.println("i-- : " + i--); // Post-decrement
     System.out.println("i : " + i);
-    monitor.expect(new String[] {
+    
+	// Let's imagine we implemeted some changes
+	
+	monitor.expect(new String[] {
       "i : 1",
       "++i : 2",
       "i++ : 2",
