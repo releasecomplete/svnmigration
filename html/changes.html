@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="ru">
+
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<TITLE>Приложение B: Отличия от CSS1</TITLE>
+<link rel="stylesheet" href="style/default.css" type="text/css">
+<link rel="prev" href="sample.html">
+<link rel="next" href="notes.html">
+<link rel="contents" href="cover.html#minitoc">
+<link rel="CSS-properties" href="propidx.html" title="properties">
+<link rel="index" href="indexlist.html" title="index">
+</HEAD>
+<BODY>
+<div class="navbar" align="center">
+<p><a href="sample.html">назад</a> &nbsp;
+<a href="notes.html">далее</a> &nbsp;
+<a href="cover.html#minitoc">содержание</a> &nbsp;
+<a href="propidx.html">свойства</a> &nbsp;
+<a href="indexlist.html">указатель</a> &nbsp;
+</div>
+<hr class="navbar">
+
+<H1 align="center">Приложение B. Отличия от CSS1</H1>
+<div class="subtoc">
+<p><strong>Содержание</strong>
+  <ul class="toc">
+    <li class="tocline2"><a href="changes.html#q1" class="tocxref">B.1 Новые функциональные возможности</a>
+    <li class="tocline2"><a href="changes.html#q2" class="tocxref">B.2 Обновленное описание</a>
+    <li class="tocline2"><a href="changes.html#changes-from-css1" class="tocxref">B.3 Изменения в семантике CSS1</a>
+  </ul>
+</div>
+<P><em>Это приложение не является нормативным, а носит только информативный характер.</em></P>
+
+<P>CSS2 базируется на CSS1, так что все таблицы стилей, допустимые в CSS1, допустимы и в CSS2. Различия между спецификацией CSS1 (см. <a href="refs.html#ref-CSS1" rel="biblioentry" class="noxref"><span class="normref">[CSS1]</span></a>) и настоящей спецификацией разделены на три группы: новые функциональные возможности, обновленные описания функциональных возможностей CSS1 и изменения в CSS1.
+
+<H2><a name="q1">B.1 Новые функциональные возможности</a></H2>
+
+<P>В дополнение к тем функциональным возможностям, которые уже существовали в CSS1, в CSS2 введена поддержка:</p>
+
+<UL>
+
+<LI>Идеологии <A HREF="media.html">типов устройств</A>.
+
+<LI>Значения <a href="cascade.html#value-def-inherit">'inherit'</a> для всех свойств.
+
+<LI><A HREF="page.html">Устройств с постраничной разбивкой</A>.
+
+<LI><A HREF="aural.html">Звуковых таблиц стилей</A>.
+
+<LI>Функций интернационализации, включая <a href="generate.html#lists">стили нумерации списков</a>, поддержку <a href="visuren.html#direction">двунаправленного ввода текста</a> и поддержку <a href="generate.html#quotes">кавычек</a> для различных языков.
+
+<LI>Механизмов <A HREF="fonts.html#font-selection">многоэтапного выбора шрифтов</A>, включая их синтез, загрузку и интеллектуальное сопоставление. Кроме того, введено понятие системных шрифтов, и добавлено новое свойство <a href="fonts.html#propdef-font-size-adjust" class="noxref"><span class="propinst-font-size-adjust">'font-size-adjust'</span></a>.
+
+<LI><A HREF="tables.html">Таблиц</A>, включая новые значения свойств <a 
+href="visuren.html#propdef-display" class="noxref"><span class="propinst-display">'display'</span></a> и <a href="visudet.html#propdef-vertical-align" class="noxref"><span class="propinst-vertical-align">'vertical-
+align'</span></a>.
+
+<LI><A HREF="visuren.html#relative-positioning">Относительного</A> и <A HREF="visuren.html#absolute-positioning">абсолютного позиционирования</A>, включая <A HREF="visuren.html#fixed-positioning">фиксированное позиционирование</A>.
+
+<LI>Новых типов блоков (наряду со структурными и строковыми): <a 
+href="visuren.html#compact">компактных</a> и <a href="visuren.html#run-in">
+инициирующих</a>.
+
+<LI>Возможности осуществления контроля над содержимым в модели визуального форматирования: его <a href="visufx.html#overflow">переполнением</a>, <a href="visufx.html#clipping">усечением</a> и <a href="visufx.html#visibility">видимостью</a>.
+
+<LI>Возможности определения минимальных и максимальных значений <a href="visudet.html#min-max-widths">ширины</a> и <a href="visudet.html#min-max-heights">высоты</a> в модели визуального форматирования.
+
+<LI>Расширенный механизм <A HREF="selector.html">селекторов</A>, включая селекторы дочерних и смежных элементов, а также селекторы атрибутов.
+
+<LI><A HREF="generate.html#generated-text">Генерируемого содержимого</a>, <a href="generate.html#counters">автоматической нумерации и счетчиков</A>, а также <a href="generate.html#markers">маркеров</a>.
+
+<LI>Эффектов затенения текста, доступных благодаря новому свойству <a href="text.html#propdef-text-shadow" class="noxref"><span class="propinst-text-shadow">'text-shadow'</span></a>.
+
+<LI>Нескольких новых <A HREF="selector.html#pseudo-classes">псевдоклассов</A>, таких как :first-child, :hover, :focus и :lang.
+
+<LI>Системных <A HREF="ui.html#system-colors">цветов</A> и <A 
+href="ui.html#system-fonts">шрифтов</a>.
+
+<LI><A href="ui.html#cursor-props">Курсоров</a>.
+
+<LI><A href="ui.html#dynamic-outlines">Динамических контуров</a>.
+
+</UL>
+
+<H2><a name="q2">B.2 Обновленные описания</a></H2>
+
+<P>Спецификация CSS1 была краткой и лаконичной. Настоящая спецификация оказывается более объемной и удобной для чтения. Хотя ее дополнительное содержание большей частью посвящено описанию новых функциональных возможностей, оно, тем не менее, существенно расширяет описание функций CSS1. За исключением некоторых случаев, описанных ниже, переписанные описания не имели никаких изменений ни в синтаксисе, ни в семантике.
+
+<H2>B.3 <a name="changes-from-css1">Изменения в семантике CSS1</a></H2>
+
+<P>Поскольку все таблицы стилей CSS1 допустимы в CSS2, то в ряде случаев при переводе таблиц стилей из CSS1 в CSS2 они могут принимать иное значение. Большинство изменений в этой спецификации внесено благодаря обратной связи с пользователями, но вместе с этим некоторые модификации были обусловлены наличием ошибок.
+
+<UL>
+<LI>Была изменена семантика правила &quot;!important&quot;. В CSS1 правило &quot;!important&quot; в таблице стилей разработчика имеет более высокий приоритет по сравнению с тем же правилом в пользовательской таблице стилей. В CSS2 все наоборот.
+
+
+<LI>В CSS2 <A HREF="syndata.html#color-units">значения цветов</A> ограничены цветовой гаммой устройства, а не пространством sRGB, как в CSS1.
+
+<LI>В CSS1 просто говорилось, что свойство 'margin-right' игнорируется, если  обоим свойствам 'margin-left' и 'width' присвоены значения. В CSS2 выбор между тем, какое свойство - 'margin-right' или 'margin-left' - будет игнорироваться, зависит от направления ввода текста.
+
+<LI>В CSS1 некоторые свойства (например, 'padding') имели значения, задаваемые относительно ширины родительского элемента. Это было ошибкой, т.к. эти значения следовало задавать относительно ширины элемента уровня блока. В связи с этим в настоящей спецификации было введено понятие &quot;контейнер&quot;.
+
+<LI>В CSS2 начальным значением свойства 'display' является 'inline', а не 'block', как в CSS1.
+
+<LI>В CSS1 свойство 'clear' применялось ко всем элементам, что оказалось ошибкой. В CSS2 данное свойство применяется только к элементам уровня блока.
+
+<LI>В CSS1 псевдоклассы <a name="x0"><span class="index-inst" title="pseudo-classes:::link|:link|link (pseudo-class)">':link'</span></a>, <a name="x3"><span class="index-inst" title="pseudo-classes:::visited|:visited|visited (pseudo-class)">':visited'</span></a> и <a name="x6"><span class="index-inst" title="pseudo-classes:::active|:active|active (pseudo-class)">':active'</span></a> были взаимоисключающими. Теперь в CSS2 псевдокласс <a href="selector.html#dynamic-pseudo-classes">':active'</a> может встречаться вместе с псевдоклассами <a href="selector.html#link-pseudo-classes">':link' или ':visited'</a>.
+
+<LI>Предложенный коэффициент масштабирования между соседними значениями свойства <a href="fonts.html#propdef-font-size" class="noxref"><span class="propinst-font-size">'font-size'</span></a> в таблице размеров шрифтов уменьшен с 1.5 до 1.2.
+
+<LI>Наследуемым значением свойства <a href="fonts.html#propdef-font-size" class="noxref"><span class="propinst-font-size">'font-size'</span></a> теперь является вычисляемое значение, а не фактическое.
+
+<LI>В CSS1 в описании свойства 'inside' (для <a href="generate.html#propdef-list-style-position" class="noxref"><span class="propinst-list-style-position">'list-style-position'</span></a>) допускалась ситуация, когда левое поле текста могло изменяться, а позиция маркера нет. В CSS2 это допущение исключено.
+
+<li>Обратитесь также к <em>нормативному</em> разделу, посвященному <a href="grammar.html#tokenizer-diffs">различиям в способах разметки, используемых в CSS1 и CSS2</a>.
+</UL>
+
+<hr class="navbar">
+
+<div class="navbar" align="center">
+<p><a href="sample.html">назад</a> &nbsp;
+<a href="notes.html">далее</a> &nbsp;
+<a href="cover.html#minitoc">содержание</a> &nbsp;
+<a href="propidx.html">свойства</a> &nbsp;
+<a href="indexlist.html">указатель</a> &nbsp;
+</div>
+</BODY>
+</HTML>
+
+
